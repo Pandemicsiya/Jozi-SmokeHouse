@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jozi SmokeHouse | Smoked to Perfection | Maboneng</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Oswald for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F0F0F;
+        }
+        .heading-font {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        /* Custom glow effects */
+        .glow-orange:hover {
+            box-shadow: 0 0 20px 2px rgba(255, 107, 0, 0.6);
+        }
+        .glow-card:hover {
+            box-shadow: 0 0 25px 3px rgba(255, 140, 26, 0.2);
+        }
+        /* Floating animation for hero images */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        /* Subtle smoke overlay background */
+        .smoky-bg {
+            background: linear-gradient(rgba(15, 15, 15, 0.85), rgba(27, 27, 27, 0.95)), url('https://images.unsplash.com/photo-1533479216061-13a6bc13a26b?q=80&w=1200') no-repeat center center/cover;
+        }
+    </style>
+</head>
+<body class="text-[#F7F3EE] overflow-x-hidden">
+
+    <!-- ─── FLOATING WHATSAPP BUTTON ─── -->
+    <a href="https://wa.me/27735819114?text=Hi%20Jozi%20SmokeHouse,%20I'd%20like%20to%20place%20an%20order!" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 flex items-center justify-center glow-orange">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.977 14.053.953 11.42.951 5.983.951 1.56 5.32 1.556 10.749c-.002 1.732.46 3.422 1.34 4.922L1.847 20.25l4.8-1.096z"/>
+        </svg>
+    </a>
+
+    <!-- ─── NAVIGATION BAR ─── -->
+    <nav class="sticky top-0 z-40 bg-[#0F0F0F]/90 backdrop-blur-md border-b border-[#1B1B1B] px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <img src="FB_IMG_1767788153769.jpg" alt="Jozi SmokeHouse Logo" class="h-12 w-12 rounded-full border border-[#FF6B00] object-cover">
+            <span class="heading-font text-xl font-bold tracking-wider text-white">Jozi <span class="text-[#FF6B00]">SmokeHouse</span></span>
+        </div>
+        <div class="hidden md:flex space-x-8 heading-font tracking-wide">
+            <a href="#menu" class="hover:text-[#FF8C1A] transition-colors">Our Menu</a>
+            <a href="#about" class="hover:text-[#FF8C1A] transition-colors">Our Story</a>
+            <a href="#why-us" class="hover:text-[#FF8C1A] transition-colors">Why Us</a>
+            <a href="#gallery" class="hover:text-[#FF8C1A] transition-colors">Gallery</a>
+        </div>
+        <div class="flex items-center space-x-3">
+            <a href="tel:+27783397021" class="hidden sm:inline-block heading-font border border-[#F7F3EE]/20 px-4 py-2 rounded text-sm hover:bg-[#1B1B1B] transition-all">Call Info</a>
+            <a href="https://wa.me/27735819114" target="_blank" class="bg-[#FF6B00] text-black font-bold heading-font px-5 py-2 rounded text-sm transition-all glow-orange">Order Now</a>
+        </div>
+    </nav>
+
+    <!-- ─── 1. HERO SECTION ─── -->
+    <header class="relative smoky-bg min-h-[90vh] flex items-center px-6 lg:px-20 py-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+            <div class="space-y-6 text-center lg:text-left">
+                <span class="text-[#FF8C1A] font-semibold tracking-widest uppercase text-sm block">🔥 Live from Maboneng</span>
+                <h1 class="heading-font text-5xl sm:text-7xl font-bold text-white leading-none">
+                    Smoked to <br><span class="text-[#FF6B00]">Perfection.</span>
+                </h1>
+                <p class="text-gray-300 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0">
+                    Premium wings, burgers, fries & slow-cooked flavour crafted with pure passion for the streets of Jozi.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                    <a href="https://wa.me/27735819114" target="_blank" class="bg-[#FF6B00] text-black font-bold text-center heading-font text-lg px-8 py-4 rounded shadow-lg transition-transform hover:-translate-y-1 glow-orange">
+                        Order Now on WhatsApp
+                    </a>
+                    <a href="tel:+27783397021" class="border-2 border-[#F7F3EE] text-white font-bold text-center heading-font text-lg px-8 py-4 rounded transition-all hover:bg-white hover:text-black">
+                        Call to Order
+                    </a>
+                </div>
+            </div>
+            <!-- Interactive Floating Food Showcase -->
+            <div class="relative flex justify-center items-center h-[350px] sm:h-[450px]">
+                <img src="IMG-20260107-WA0007.jpg" alt="Sticky Glazed Wings" class="absolute w-2/3 sm:w-1/2 rounded-xl shadow-2xl border border-[#1B1B1B] left-0 top-10 z-20 animate-float object-cover aspect-square">
+                <img src="IMG-20260107-WA0008.jpg" alt="Pulled Meat Burger" class="absolute w-2/3 sm:w-1/2 rounded-xl shadow-2xl border border-[#FF6B00]/40 right-0 bottom-10 z-10 animate-float object-cover aspect-square" style="animation-delay: 2s;">
+            </div>
+        </div>
+    </header>
+
+    <!-- ─── 2. SOCIAL PROOF BAR ─── -->
+    <section class="bg-[#1B1B1B] border-y border-[#FF6B00]/20 py-8 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="space-y-1">
+                <div class="heading-font text-3xl sm:text-4xl font-bold text-[#FF8C1A]">1,500+</div>
+                <div class="text-xs uppercase tracking-wider text-gray-400">Happy Customers</div>
+            </div>
+            <div class="space-y-1">
+                <div class="heading-font text-3xl sm:text-4xl font-bold text-[#FF8C1A]">5-Star</div>
+                <div class="text-xs uppercase tracking-wider text-gray-400">Local Reviews</div>
+            </div>
+            <div class="space-y-1">
+                <div class="heading-font text-3xl sm:text-4xl font-bold text-[#FF8C1A]">Fast</div>
+                <div class="text-xs uppercase tracking-wider text-gray-400">WhatsApp Ordering</div>
+            </div>
+            <div class="space-y-1">
+                <div class="heading-font text-3xl sm:text-4xl font-bold text-[#FF8C1A]">Fresh</div>
+                <div class="text-xs uppercase tracking-wider text-gray-400">Daily Preparation</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── 3. FEATURED MENU SECTION ─── -->
+    <section id="menu" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 space-y-3">
+            <span class="text-[#FF6B00] font-bold uppercase tracking-widest text-sm">Taste the Smoke</span>
+            <h2 class="heading-font text-4xl sm:text-5xl font-bold text-white">Our Signature Masterpieces</h2>
+            <div class="w-24 h-1 bg-[#FF6B00] mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-[#1B1B1B] rounded-2xl overflow-hidden border border-white/5 group transition-all glow-card">
+                <div class="overflow-hidden h-64 relative">
+                    <span class="absolute top-4 right-4 bg-[#9E2A2B] text-white font-bold text-xs uppercase px-3 py-1 rounded-full z-10">Signature Platter</span>
+                    <img src="IMG-20260107-WA0009.jpg" alt="Maboneng Mixed Grill" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6 space-y-4">
+                    <h3 class="heading-font text-2xl font-bold text-white">The Maboneng Mixed Grill</h3>
+                    <p class="text-gray-400 text-sm">Our ultimate feast. Slow-smoked prime cuts, flame-kissed ribs, grilled wings, crisp fries, and a fresh side salad.</p>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-xl font-bold text-[#D4A017]">Premium Value</span>
+                        <a href="https://wa.me/27735819114?text=I'd%20like%20to%20order%20The%20Maboneng%20Mixed%20Grill" target="_blank" class="bg-[#FF6B00] text-black font-bold heading-font text-xs px-4 py-2 rounded uppercase transition-colors hover:bg-[#FF8C1A]">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#1B1B1B] rounded-2xl overflow-hidden border border-white/5 group transition-all glow-card">
+                <div class="overflow-hidden h-64 relative">
+                    <span class="absolute top-4 right-4 bg-[#D4A017] text-black font-bold text-xs uppercase px-3 py-1 rounded-full z-10">Crowd Favourite</span>
+                    <img src="IMG-20260107-WA0011.jpg" alt="Pulled Pork Burger" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6 space-y-4">
+                    <h3 class="heading-font text-2xl font-bold text-white">Smoked Pulled Burger</h3>
+                    <p class="text-gray-400 text-sm">Succulent, slow-cooked pulled meat piled high on a perfectly toasted bun, dripping with our secret signature smokehouse BBQ sauce.</p>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-xl font-bold text-[#D4A017]">Juicy & Bold</span>
+                        <a href="https://wa.me/27735819114?text=I'd%20like%20to%20order%20the%20Smoked%20Pulled%20Burger" target="_blank" class="bg-[#FF6B00] text-black font-bold heading-font text-xs px-4 py-2 rounded uppercase transition-colors hover:bg-[#FF8C1A]">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[#1B1B1B] rounded-2xl overflow-hidden border border-white/5 group transition-all glow-card">
+                <div class="overflow-hidden h-64 relative">
+                    <span class="absolute top-4 right-4 bg-[#FF6B00] text-black font-bold text-xs uppercase px-3 py-1 rounded-full z-10">Best Seller</span>
+                    <img src="IMG-20260107-WA0013.jpg" alt="Ribs and Fries Combo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6 space-y-4">
+                    <h3 class="heading-font text-2xl font-bold text-white">Sticky Ribs & Fries Combo</h3>
+                    <p class="text-gray-400 text-sm">Glazed, sticky rib lets slow-smoked to perfection, paired with seasoned fries, crumbed feta chunks, and a fresh garden salad.</p>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-xl font-bold text-[#D4A017]">Melt-In-Mouth</span>
+                        <a href="https://wa.me/27735819114?text=I'd%20like%20to%20order%20the%20Sticky%20Ribs%20and%20Fries%20Combo" target="_blank" class="bg-[#FF6B00] text-black font-bold heading-font text-xs px-4 py-2 rounded uppercase transition-colors hover:bg-[#FF8C1A]">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── 4. ABOUT SECTION ─── -->
+    <section id="about" class="bg-[#1B1B1B]/60 py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="flex justify-center">
+                <div class="p-4 bg-[#0F0F0F] rounded-full border border-[#FF6B00]/30 shadow-2xl">
+                    <img src="FB_IMG_1767788153769.jpg" alt="Jozi Smokehouse Logo" class="w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover">
+                </div>
+            </div>
+            <div class="space-y-6 text-center lg:text-left">
+                <span class="text-[#FF8C1A] uppercase tracking-widest text-sm font-bold block">The Story</span>
+                <h2 class="heading-font text-4xl sm:text-5xl font-bold text-white">Built For Jozi Food Lovers.</h2>
+                <p class="text-gray-300 leading-relaxed text-base sm:text-lg">
+                    Rooted directly in the vibrant city streets at <strong class="text-[#FF6B00]">264 Fox Street, Maboneng</strong>, Jozi SmokeHouse is where premium slow-cooked technique crashes into raw Johannesburg street culture. 
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    We are completely obsessed with rich woodsmoke flavor, top-tier cuts, and the unmatched energy of our local food community. Every wing glaze, every sauce drip, and every char line is crafted to offer you a premium, authentic street-gourmet standard.
+                </p>
+                <div class="pt-4">
+                    <blockquote class="border-l-4 border-[#FF6B00] pl-4 italic text-gray-300">
+                        "Where food meets soul."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── 5. WHY CHOOSE US ─── -->
+    <section id="why-us" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 space-y-3">
+            <h2 class="heading-font text-4xl font-bold text-white">The SmokeHouse Standards</h2>
+            <div class="w-16 h-1 bg-[#FF6B00] mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-[#1B1B1B] p-8 rounded-xl border border-white/5 hover:border-[#FF6B00]/30 transition-all text-center space-y-3">
+                <div class="text-4xl">🔥</div>
+                <h4 class="heading-font text-xl font-bold text-white">Flame Grilled</h4>
+                <p class="text-gray-400 text-sm">Perfect char, locking in our custom local rubs and glazes.</p>
+            </div>
+            <div class="bg-[#1B1B1B] p-8 rounded-xl border border-white/5 hover:border-[#FF6B00]/30 transition-all text-center space-y-3">
+                <div class="text-4xl">🪵</div>
+                <h4 class="heading-font text-xl font-bold text-white">Slow Smoked</h4>
+                <p class="text-gray-400 text-sm">Hours of low-and-slow wood smoking for extreme tenderness.</p>
+            </div>
+            <div class="bg-[#1B1B1B] p-8 rounded-xl border border-white/5 hover:border-[#FF6B00]/30 transition-all text-center space-y-3">
+                <div class="text-4xl">🛵</div>
+                <h4 class="heading-font text-xl font-bold text-white">Fast Delivery</h4>
+                <p class="text-gray-400 text-sm">Straight out of the Maboneng pit to your exact location.</p>
+            </div>
+            <div class="bg-[#1B1B1B] p-8 rounded-xl border border-white/5 hover:border-[#FF6B00]/30 transition-all text-center space-y-3">
+                <div class="text-4xl">🥩</div>
+                <h4 class="heading-font text-xl font-bold text-white">Premium Ingredients</h4>
+                <p class="text-gray-400 text-sm">We never cut corners. Quality cuts and fresh greens daily.</p>
+            </div>
+            <div class="bg-[#1B1B1B] p-8 rounded-xl border border-white/5 hover:border-[#FF6B00]/30 transition-all text-center space-y-3">
+                <div class="text-4xl">🍟</div>
+                <h4 class="heading-font text-xl font-bold text-white">Big Portions</h4>
+                <p class="text-gray-400 text-sm">Hearty street portions made to fully satisfy real hunger.</p>
+            </div>
+            <div class="bg-[#1B1B1B] p-8 rounded-xl border border-white/5 hover:border-[#FF6B00]/30 transition-all text-center space-y-3">
+                <div class="text-4xl">🌿</div>
+                <h4 class="heading-font text-xl font-bold text-white">Fresh Daily</h4>
+                <p class="text-gray-400 text-sm">Zero compromises. Everything is prepped fresh every morning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── 6. GALLERY SECTION ─── -->
+    <section id="gallery" class="bg-[#1B1B1B]/40 py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-3">
+                <span class="text-[#FF6B00] font-bold uppercase tracking-widest text-sm">Visual Feast</span>
+                <h2 class="heading-font text-4xl font-bold text-white">Straight From The Grill</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl h-80 border border-white/5 group relative">
+                    <img src="IMG-20260107-WA0014.jpg" alt="Smokehouse Rib Platter" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex items-end p-4">
+                        <p class="heading-font font-bold text-lg text-white">Wood-Smoked Platters</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-xl h-80 border border-white/5 group relative">
+                    <img src="IMG-20260107-WA0015.jpg" alt="Foil Box Wings & Chips" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex items-end p-4">
+                        <p class="heading-font font-bold text-lg text-white">Flame-Kissed Wings</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-xl h-80 border border-white/5 group relative">
+                    <img src="IMG-20260107-WA0016.jpg" alt="Gourmet Smokehouse Sides" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex items-end p-4">
+                        <p class="heading-font font-bold text-lg text-white">Premium Street Sides</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── 7. TESTIMONIALS SECTION ─── -->
+    <section class="py-20 px-6 max-w-5xl mx-auto text-center">
+        <h2 class="heading-font text-3xl sm:text-4xl font-bold mb-12 text-white">Loved Across Johannesburg</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <div class="bg-[#1B1B1B] p-6 rounded-2xl border border-white/5 space-y-3">
+                <div class="text-[#FF8C1A] text-xl">★★★★★</div>
+                <p class="text-gray-300 italic">"Best wings in Jozi. Hands down. The char flavor is perfectly balanced with the glaze."</p>
+                <p class="text-sm font-bold text-white">— Tshepo M., Braamfontein</p>
+            </div>
+            <div class="bg-[#1B1B1B] p-6 rounded-2xl border border-white/5 space-y-3">
+                <div class="text-[#FF8C1A] text-xl">★★★★★</div>
+                <p class="text-gray-300 italic">"That pulled burger changed my life. Insane portions and fast response over WhatsApp."</p>
+                <p class="text-sm font-bold text-white">— Lerato N., Maboneng</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── 8. FINAL CALL TO ACTION ─── -->
+    <section class="bg-gradient-to-t from-[#1B1B1B] to-[#0F0F0F] border-t border-[#FF6B00]/20 py-24 px-6 text-center relative overflow-hidden">
+        <div class="max-w-3xl mx-auto space-y-6 relative z-10">
+            <h2 class="heading-font text-5xl sm:text-6xl font-bold text-white leading-tight">Ready to taste <br>the smoke?</h2>
+            <p class="text-gray-300 text-lg max-w-lg mx-auto">
+                Freshly prepared daily at 264 Fox Street, Maboneng. Get your order secured before we run out for the day!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-6">
+                <a href="https://wa.me/27735819114" target="_blank" class="bg-[#FF6B00] text-black font-bold heading-font text-lg px-8 py-4 rounded transition-transform hover:-translate-y-1 glow-orange">
+                    Order Now on WhatsApp
+                </a>
+                <a href="tel:+27783397021" class="border-2 border-[#F7F3EE]/20 text-white font-bold heading-font text-lg px-8 py-4 rounded hover:bg-[#1B1B1B] transition-colors">
+                    Call 078 339 7021
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── 9. LUXURY FOOTER ─── -->
+    <footer class="bg-[#0F0F0F] border-t border-[#1B1B1B] py-12 px-6 text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+            <div class="space-y-2">
+                <h5 class="heading-font text-white font-bold text-lg">Jozi SmokeHouse</h5>
+                <p class="text-xs">Where food meets soul.</p>
+                <p class="text-xs text-gray-400">264 Fox Street, Maboneng, Johannesburg</p>
+            </div>
+            <div class="space-y-1">
+                <h6 class="heading-font text-white font-bold text-sm">Direct Contacts</h6>
+                <p class="text-xs text-gray-400">Pretty Ndlovu: <a href="tel:+27735819114" class="hover:text-white">073 581 9114</a></p>
+                <p class="text-xs text-gray-400">Sizwe Ncube: <a href="tel:+27783397021" class="hover:text-white">+27 78 339 7021</a></p>
+            </div>
+            <div class="text-center md:text-right space-y-2">
+                <p class="text-xs text-gray-400">Open Daily for Collect & Fast Delivery</p>
+                <p class="text-xs">&copy; 2026 Jozi SmokeHouse. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
